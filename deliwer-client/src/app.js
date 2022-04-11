@@ -1,18 +1,20 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
-import "./app.css";
-import Bid from "./components/bid/bid";
-import Contact from "./components/contact/contact";
-import Dashboard from "./components/dashboard/dashboard";
-import Drivers from "./components/drivers/drivers";
-import Home from "./components/home/home";
-import Track from "./components/track/track";
-import Fonts from "./styles/fonts";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import './app.css';
+import Bid from './components/bid/bid';
+import Contact from './components/contact/contact';
+import Dashboard from './components/dashboard/dashboard';
+import Drivers from './components/drivers/drivers';
+import Home from './components/home/home';
+import Navigation from './components/navigation/navigation';
+import Track from './components/track/track';
+import Fonts from './styles/fonts';
 
 const App = () => (
   <Styles>
     <BrowserRouter>
+      <Navigation />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/bid" exact element={<Bid />} />
@@ -26,7 +28,7 @@ const App = () => (
 );
 
 const Styles = styled.div`
-  ${Fonts}
+  /* ${Fonts} */
 `;
 
 export default App;
