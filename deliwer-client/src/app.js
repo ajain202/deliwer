@@ -28,7 +28,7 @@ const App = () => (
 );
 
 const Styles = styled.div`
-  ${Fonts}
+  /* ${Fonts} */
 `;
 
 export default App;
