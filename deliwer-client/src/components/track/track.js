@@ -1,5 +1,5 @@
 import React from "react";
-import ActiveOrders from '../bid/active-orders/active-orders';
+import ActiveOrders from './active-orders/active-orders';
 import Timeline from "./timeline/timeline";
 
 const Track = () => {
