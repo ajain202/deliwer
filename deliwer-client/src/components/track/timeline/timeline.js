@@ -4,7 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 const Timeline = () => {
   return (
-    <div class="bg-gray-100 py-12 flex flex-wrap items-center justify-center">
+    <div class="bg-gray-100 py-6 flex flex-wrap items-center justify-center">
       <div>
         <Arrow status="complete" text1="Bid Accepted" />
       </div>
