@@ -24,12 +24,14 @@ const ToggleInput = ({ label, required }) => {
         </div>
 
         <style>
-          {`.checkbox:checked {
-                      right: 0;
-                  }
-                  .checkbox:checked + .toggle-label {
-                      background-color: #4c51bf;
-                  }`}
+          {`
+          .checkbox:checked {
+              right: 0;
+          }
+          .checkbox:checked + .toggle-label {
+              background-color: #4c51bf;
+          }
+          `}
         </style>
       </div>
     </>

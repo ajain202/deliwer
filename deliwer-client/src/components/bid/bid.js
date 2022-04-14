@@ -6,8 +6,6 @@ const Bid = () => {
   return (
     <>
       <div className="container grid grid-cols-1 md:grid-cols-3 p-6 gap-6 md:h-[80vh] min-w-full">
-        {/* Remove class [ h-24 ] when adding a card block */}
-        {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
         <div className="md:col-span-2 h-auto">
           <Form></Form>
         </div>
@@ -15,20 +13,20 @@ const Bid = () => {
           <ActiveOrders />
         </div>
         <style>
-          {' '}
-          <style>{`
-.active-orders::-webkit-scrollbar {
-  width: 5px;
-}
+          {`
+          .active-orders::-webkit-scrollbar {
+            width: 5px;
+          }
 
-.active-orders::-webkit-scrollbar-thumb {
-  background-color: var(--slate);
-  border-radius: 5px;
-}
+          .active-orders::-webkit-scrollbar-thumb {
+            background-color: var(--slate);
+            border-radius: 5px;
+          }
 
-.active-orders::-webkit-scrollbar-track {
-  background: var(--light-gray);
-}`}</style>
+          .active-orders::-webkit-scrollbar-track {
+            background: var(--light-gray);
+          }
+          `}
         </style>
       </div>
     </>
