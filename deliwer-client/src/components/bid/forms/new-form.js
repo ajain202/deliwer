@@ -17,9 +17,6 @@ const NewForm = () => {
       <div className="col-span-2">
         <TextInput label="Location" required />
       </div>
-      {/* <div className="col-span-2 sm:col-span-1">
-        <ToggleInput label="Send to Favorites" required />
-      </div> */}
       <div className="mt-3 col-span-2 flex justify-center">
         <div className="mr-3">
           <Button label={'Send to Favorites'} />

@@ -95,7 +95,7 @@ const Navigation = () => {
             </div>
           </div>
         </nav>
-        <nav>
+        <nav className="bg-white shadow">
           <div className={`py-4 px-6 w-full flex lg:hidden justify-between items-center bg-white ${show ? 'fixed ' : ''}top-0 z-40`}>
             <div>
               <Logo />
