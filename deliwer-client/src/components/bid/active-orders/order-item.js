@@ -5,7 +5,6 @@ import { Edit, Phone } from 'tabler-icons-react';
 
 const OrderItem = ({ orderId, estimatedTime, status }) => {
   let statusColor;
-  console.log('status', status);
   if (status === 'bid-unaccepted') {
     statusColor = 'text-red-500';
   } else if (status === 'bid-accepted') {

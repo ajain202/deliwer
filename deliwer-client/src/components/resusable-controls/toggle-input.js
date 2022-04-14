@@ -5,8 +5,8 @@ const ToggleInput = ({ label, required }) => {
 
   return (
     <>
-      <label className="text-sm leading-none text-gray-800">{label}</label>
-      <div className="w-full pt-3 mt-3 flex flex-col place-items-start">
+      {label && <label className="inline-block pb-3 mb-3 text-sm leading-none text-gray-800">{label}</label>}
+      <div className="w-full flex flex-col place-items-start">
         <div className="cursor-pointer rounded-full bg-indigo-700 relative shadow-sm">
           <input
             type="checkbox"

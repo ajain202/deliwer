@@ -9,25 +9,9 @@ const Bid = () => {
         <div className="md:col-span-2 h-auto">
           <Form></Form>
         </div>
-        <div className="active-orders md:col-span-1 h-auto overflow-y-auto">
+        <div className="custom-scrollbar md:col-span-1 h-auto overflow-y-auto">
           <ActiveOrders />
         </div>
-        <style>
-          {`
-          .active-orders::-webkit-scrollbar {
-            width: 5px;
-          }
-
-          .active-orders::-webkit-scrollbar-thumb {
-            background-color: var(--slate);
-            border-radius: 5px;
-          }
-
-          .active-orders::-webkit-scrollbar-track {
-            background: var(--light-gray);
-          }
-          `}
-        </style>
       </div>
     </>
   );
