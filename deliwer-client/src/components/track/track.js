@@ -1,6 +1,7 @@
 import React from "react";
-import ActiveOrders from './active-orders/active-orders';
+import ActiveOrders from "./active-orders/active-orders";
 import Timeline from "./timeline/timeline";
+import Map from "./map/map";
 
 const Track = () => {
   return (
@@ -12,17 +13,17 @@ const Track = () => {
           <ActiveOrders />
         </div>
 
-        <div className="md:col-span-2 h-auto">
-          <div >
-          blah
-        </div>
-        <div>
-        <Timeline />
-        </div>
+        <div className="md:col-span-2 h-auto flex flex-col justify-between">
+          <div>
+            <Map />
+          </div>
+          <div>
+            <Timeline />
+          </div>
         </div>
 
         <style>
-          {' '}
+          {" "}
           <style>{`
 .active-orders::-webkit-scrollbar {
   width: 5px;
