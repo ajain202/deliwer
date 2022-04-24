@@ -1,47 +1,23 @@
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import React from "react";
-import { maxHeight, maxWidth } from 'tailwindcss/defaultTheme';
+import { MapContainer, TileLayer } from "react-leaflet";
+import RoutineMachine from "./RoutineMachine";
 
-const containerStyle = {
-  width: '800px',
-  height: '300px',
-  maxWidth:'100%'
+const Map = (props) => {
+  return (
+    <MapContainer
+      className="md:h-full h-[200px]"
+      doubleClickZoom={false}
+      id="mapId"
+      zoom={14}
+      center={[41.8919, -87.6051]}
+    >
+      <TileLayer
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+        attribution="Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri"
+      />
+      <RoutineMachine />
+    </MapContainer>
+  );
 };
-
-const Map = () => {
-  const center = {
-    lat: 41.8781,
-    lng: 87.6298
-  };
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: ""
-  })
-
-  const [map, setMap] = React.useState(null)
-
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map)
-  }, [])
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null)
-  }, [])
-
-  return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-      </GoogleMap>
-  ) : <></>
-}
 
 export default Map;

@@ -3,7 +3,7 @@ import { Phone, Edit } from 'tabler-icons-react';
 
 const OrderItem = ({Order,ETA}) => {
   return (
-    <div className="card mb-5 p-5 w-full">
+    <div className="card mb-5 p-5 w-[300px]">
       <div className="flex items-center border-b border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div>

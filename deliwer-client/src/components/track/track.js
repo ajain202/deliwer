@@ -14,7 +14,7 @@ const Track = () => {
         </div>
 
         <div className="md:col-span-2 h-auto flex flex-col justify-between">
-          <div>
+          <div className="md:h-full h-[200px]">
             <Map />
           </div>
           <div>

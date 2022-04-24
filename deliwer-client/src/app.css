@@ -4,6 +4,12 @@
   /* border-radius: theme('borderRadius.lg'); */
   /* box-shadow: theme('boxShadow.DEFAULT'); */
 }
+.leaflet-top.leaflet-right{
+  display: none;
+}
+#mapId{
+  z-index: 0;
+}
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
