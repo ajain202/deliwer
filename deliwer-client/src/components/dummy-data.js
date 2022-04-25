@@ -26,12 +26,12 @@ export const activeOrders = [
   },
 ];
 
-export const drivers = [
+export const driversarray = [
   {
     name: 'James',
     favorite: false,
     yourOrders: 16,
-    totalOrders: 100,
+    totalOrders: 600,
     rating: 4.1,
     reviews: 100,
   },

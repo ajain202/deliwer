@@ -1,18 +1,41 @@
-import React from 'react';
-import RadioInput from '../../resusable-controls/radio-input';
-import SearchBox from '../../resusable-controls/search-box';
-import ToggleInput from '../../resusable-controls/toggle-input';
+import React from "react";
+import RadioInput from "../../resusable-controls/radio-input";
+import SearchBox from "../../resusable-controls/search-box";
+import ToggleInput from "../../resusable-controls/toggle-input";
 
-const FilterPane = () => {
-  const sortOptions = [{ label: 'Ratings' }, { label: 'Orders delivered for you' }, { label: 'Total orders delivered' }];
+const FilterPane = ({
+  onFilterChangeHandler,
+  onFavoriteClickHandler,
+  sortByValue,
+  setSortByValue,
+}) => {
+  const sortOptions = [
+    { label: "Ratings" },
+    { label: "Orders delivered for you" },
+    { label: "Total orders delivered" },
+  ];
 
   return (
     <div className="h-full card p-5">
-      <SearchBox placeholder="Driver Name" />
-      <p class="text-lg leading-4 pb-4 mt-6 font-medium text-gray-600">Favorites</p>
-      <ToggleInput />
-      <p class="text-lg leading-4 py-4 mt-5 font-medium text-gray-600">Sort By</p>
-      <RadioInput options={sortOptions} />
+      <SearchBox
+        onChangeHandler={onFilterChangeHandler}
+        placeholder="Driver Name"
+      />
+      <p className="text-lg leading-4 pb-4 mt-6 font-medium text-gray-600">
+        Favorites
+      </p>
+      <ToggleInput onChangeHandler={onFavoriteClickHandler} />
+      <p className="text-lg leading-4 py-4 mt-5 font-medium text-gray-600">
+        Sort By
+      </p>
+      <RadioInput
+        options={sortOptions}
+        value={sortByValue}
+        onChangeHandler={(e) => {
+          console.log("e", e.target.value);
+          return setSortByValue(e.target.value);
+        }}
+      />
     </div>
   );
 };
