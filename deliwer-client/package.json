@@ -12,7 +12,6 @@
     "@heroicons/react": "^1.0.6",
     "chart.js": "^3.7.1",
     "next": "^12.1.5",
-    "@react-google-maps/api": "^2.8.1",
     "leaflet": "^1.8.0",
     "leaflet-routing-machine": "^3.2.12",
     "react": "^17.0.2",
