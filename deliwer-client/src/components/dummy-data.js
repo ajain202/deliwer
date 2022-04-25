@@ -36,9 +36,64 @@ export const activeOrdersArray = [
   },
 ];
 
+export const pastOrders = [
+  {
+    orderId: "123456",
+    amount: "15$",
+    bidType: "Single Order",
+    address: "1210 W Lexingtion Street Apt 3F",
+    city: "Chicago",
+    drivers: "James Cameron",
+  },
+  {
+    orderId: "345678",
+    amount: "10$",
+    bidType: "Hire Out",
+    address: "712 S Aberdeen St Apt 3R",
+    city: "Chicago",
+    drivers: "Jimmy Neutron",
+  },
+  {
+    orderId: "789101",
+    amount: "20$",
+    bidType: "Single Order",
+    address: "1218 W Flournoy St Apt 1F",
+    city: "Chicago",
+    drivers: "Jack Dawson",
+  },
+  {
+    orderId: "565433",
+    amount: "30$",
+    bidType: "Single Order",
+    address: "821 S Miller St",
+    city: "Chicago",
+    drivers: "Jamie Fox",
+  },
+  {
+    orderId: "123799",
+    amount: "7$",
+    bidType: "Hire Out",
+    address: "1148 W Washburne Ave",
+    city: "Chicago",
+    drivers: "Johnny Sins",
+  },
+];
+
+export const month = [
+  { expenses: 1234, month: "April", delta: 30 },
+  { expenses: 3356, month: "March", delta: 43 },
+  { expenses: 1122, month: "February", delta: 13 },
+  { expenses: 1233, month: "January", delta: 17 },
+  { expenses: 1111, month: "December", delta: 27 },
+  { expenses: 2222, month: "November", delta: 31 },
+  { expenses: 1112, month: "October", delta: 57 },
+  { expenses: 1134, month: "September", delta: 23 },
+  { expenses: 4567, month: "August", delta: 52 },
+];
+
 export const driversarray = [
   {
-    name: 'James',
+    name: "James",
     favorite: false,
     yourOrders: 16,
     totalOrders: 600,
@@ -46,7 +101,7 @@ export const driversarray = [
     reviews: 100,
   },
   {
-    name: 'Jimmy',
+    name: "Jimmy",
     favorite: true,
     yourOrders: 26,
     totalOrders: 125,
@@ -54,7 +109,7 @@ export const driversarray = [
     reviews: 120,
   },
   {
-    name: 'Jack',
+    name: "Jack",
     favorite: true,
     yourOrders: 36,
     totalOrders: 150,
@@ -62,7 +117,7 @@ export const driversarray = [
     reviews: 140,
   },
   {
-    name: 'Jamie',
+    name: "Jamie",
     favorite: false,
     yourOrders: 46,
     totalOrders: 175,
@@ -70,7 +125,7 @@ export const driversarray = [
     reviews: 160,
   },
   {
-    name: 'Johnny',
+    name: "Johnny",
     favorite: false,
     yourOrders: 56,
     totalOrders: 200,
@@ -78,7 +133,7 @@ export const driversarray = [
     reviews: 180,
   },
   {
-    name: 'Jacob',
+    name: "Jacob",
     favorite: true,
     yourOrders: 66,
     totalOrders: 225,

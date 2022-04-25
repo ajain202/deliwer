@@ -1,27 +1,39 @@
-import Chart from 'chart.js/auto';
-import React, { useEffect } from 'react';
+import Chart from "chart.js/auto";
+import React, { useEffect } from "react";
 
 function Graph() {
   useEffect(() => {
     let yLabels = {
-      0: '$0',
-      6: '$6K',
-      10: '$10K',
-      14: '$15K',
-      20: '$20K',
-      40: '$40K',
+      0: "$0",
+      6: "$6K",
+      10: "$10K",
+      14: "$15K",
+      20: "$20K",
+      40: "$40K",
     };
 
-    let line_chart = new Chart(document.getElementById('line_chart'), {
-      type: 'line',
+    let line_chart = new Chart(document.getElementById("line_chart"), {
+      type: "line",
       data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec'],
+        labels: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Nov",
+          "Dec",
+        ],
         datasets: [
           {
-            data: [6, 8, 20, 18, 10, 10, 16, 16, 19, 16, 14, 10],
-            borderColor: '#F0ABFC',
+            data: [6, 8, 20, 18, 10, 40, 60, 16, 19, 16, 14, 10],
+            borderColor: "#F0ABFC",
             fill: false,
-            label: 'Expenditure',
+            label: "Expenditure",
           },
         ],
       },
@@ -38,6 +50,7 @@ function Graph() {
               },
               ticks: {
                 beginAtZero: true,
+                stepSize: 5,
                 callback: function (value, index, values) {
                   return yLabels[value];
                 },
@@ -53,12 +66,16 @@ function Graph() {
       <div className="card mt-5 w-full bg-white p-4 rounded-lg shadow">
         <div className="lg:flex justify-between w-full items-center">
           <div className="py-3 md:px-4 flex items-center bg-gray-50 rounded-xl">
-            <p className="text-xs font-medium leading-none text-center text-gray-500">Show:</p>
+            <p className="text-xs font-medium leading-none text-center text-gray-500">
+              Show:
+            </p>
             <div className="px-2 sm:px-3.5 border-r border-gray-300">
               <p className="text-xs leading-none text-gray-800">Month</p>
             </div>
             <div className="px-2 sm:px-3.5">
-              <p className="text-xs font-bold leading-none text-indigo-700">Year</p>
+              <p className="text-xs font-bold leading-none text-indigo-700">
+                Year
+              </p>
             </div>
           </div>
           <div className="flex items-center mt-4 lg:mt-0">
@@ -79,7 +96,7 @@ function Graph() {
           </div>
           <canvas
             id="line_chart"
-            style={{ display: 'block' }}
+            style={{ display: "block" }}
             className="chartjs-render-monitor"
           />
         </div>

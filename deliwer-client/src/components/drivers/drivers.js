@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import DriversGrid from './drivers-grid/drivers-grid';
 import FilterPane from './filter-pane/filter-pane';
 
-
 const Drivers = () => {
   const [searchDriverName, setSearchDriverName] = useState('');
   const [favorites,setFavorites]= useState(false)
