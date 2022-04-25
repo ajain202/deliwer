@@ -1,30 +1,41 @@
-export const activeOrders = [
+export const activeOrdersArray = [
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: "15 mins",
-    status: "bid-accepted",
+    orderId: '124324',
+    estimatedTime: '15 mins',
+    status: 'bid-accepted',
+    contact: '312-232-1212',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: "10 mins",
-    status: "in-transit",
+    orderId: '434344',
+    estimatedTime: '10 mins',
+    status: 'in-transit',
+    contact: '434-434-5464',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: "--",
-    status: "bid-unaccepted",
+    orderId: '675435',
+    estimatedTime: 'Bid unaccepted',
+    status: 'bid-unaccepted',
+    contact: '',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: "12 mins",
-    status: "in-transit",
+    orderId: '535422',
+    estimatedTime: '12 mins',
+    status: 'in-transit',
+    contact: '234-767-3477',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: "20 mins",
-    status: "in-transit",
+    orderId: '242465',
+    estimatedTime: '20 mins',
+    status: 'in-transit',
+    contact: '324-678-7676',
+    location: '1210 W Lexington St',
   },
 ];
+
 export const pastOrders = [
   {
     orderId: "123456",
@@ -67,6 +78,7 @@ export const pastOrders = [
     drivers: "Johnny Sins",
   },
 ];
+
 export const month = [
   { expenses: 1234, month: "April", delta: 30 },
   { expenses: 3356, month: "March", delta: 43 },
@@ -78,12 +90,13 @@ export const month = [
   { expenses: 1134, month: "September", delta: 23 },
   { expenses: 4567, month: "August", delta: 52 },
 ];
-export const drivers = [
+
+export const driversarray = [
   {
     name: "James",
     favorite: false,
     yourOrders: 16,
-    totalOrders: 100,
+    totalOrders: 600,
     rating: 4.1,
     reviews: 100,
   },
