@@ -1,23 +1,45 @@
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { MessageDots, Star, UserCircle } from 'tabler-icons-react';
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { MessageDots, Star, UserCircle } from "tabler-icons-react";
 
-const DriverCard = ({ name, yourOrders, totalOrders, favorite, rating, reviews }) => {
+const DriverCard = ({
+  name,
+  yourOrders,
+  totalOrders,
+  favorite,
+  rating,
+  reviews,
+  setFavoriteDriver,
+}) => {
   return (
     <div className="card p-5 w-full h-fit last:mb-2">
       <div className="flex items-center border-b border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div className="flex items-center">
             <span>
-              <UserCircle strokeWidth={1.5} size={'1.8rem'} />
+              <UserCircle strokeWidth={1.5} size={"1.8rem"} />
             </span>
-            <span className="ml-2 text-xl font-medium leading-5 text-gray-800">{name}</span>
+            <span className="ml-2 text-xl font-medium leading-5 text-gray-800">
+              {name}
+            </span>
           </div>
           <div>
-            <div className="flex items-center text-xl cursor-pointer">
-              {favorite ? <FontAwesomeIcon className="text-red-500" icon={faHeart} /> : <FontAwesomeIcon icon={farHeart} />}
+            <div
+              driver-name={name}
+              onClick={setFavoriteDriver}
+              className="flex items-center text-xl cursor-pointer"
+            >
+              {favorite ? (
+                <FontAwesomeIcon
+                  val={name}
+                  className="text-red-500"
+                  icon={faHeart}
+                />
+              ) : (
+                <FontAwesomeIcon val={name} icon={farHeart} />
+              )}
             </div>
           </div>
         </div>

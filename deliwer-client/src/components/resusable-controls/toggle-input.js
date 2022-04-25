@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const ToggleInput = ({ label, required }) => {
-  const [active, setActive] = useState(false);
-
+const ToggleInput = ({ label, active, required, onChangeHandler }) => {
   return (
     <>
-      {label && <label className="inline-block pb-3 mb-3 text-sm leading-none text-gray-800">{label}</label>}
+      {label && <label className="inline-block pb-1 mb-2 text-sm leading-none">{label}</label>}
       <div className="w-full flex flex-col place-items-start">
         <div className="cursor-pointer rounded-full bg-indigo-700 relative shadow-sm">
           <input
@@ -15,12 +13,9 @@ const ToggleInput = ({ label, required }) => {
             className="bg-slate-100 border-gray-200 focus:border-gray-600 focus:outline-none checkbox w-6 h-6 rounded-full absolute shadow-sm appearance-none cursor-pointer border border-transparent top-0 bottom-0 m-auto"
             checked={active}
             required={required}
-            onClick={() => setActive(!active)}
+            onChange={onChangeHandler}
           />
-          <label
-            htmlFor="toggle"
-            className="toggle-label dark:bg-gray-700 block w-12 h-4 overflow-hidden rounded-full bg-gray-300 cursor-pointer"
-          />
+          <label htmlFor="toggle" className="toggle-label block w-12 h-4 overflow-hidden rounded-full bg-gray-300 cursor-pointer" />
         </div>
 
         <style>

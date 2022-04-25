@@ -3,6 +3,7 @@ import { colors } from "tailwindcss/defaultTheme";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const Timeline = () => {
+
   return (
     <div class="bg-gray-100 py-6 flex flex-wrap items-center justify-center">
       <div>

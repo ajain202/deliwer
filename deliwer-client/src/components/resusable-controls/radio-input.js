@@ -1,20 +1,25 @@
-import React from 'react';
+import React from "react";
 
-const RadioInput = ({ options }) => {
+const RadioInput = ({ options, value, onChangeHandler }) => {
   return (
-    <>
+    <div>
       {options &&
         options.map((option) => (
-          <div className="flex items-center mb-4">
+          <div key={option.label} className="flex items-center mb-4">
             <div className="bg-white dark:bg-gray-100 rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
               <input
+                value={option.label}
                 type="radio"
                 name="radio"
                 className="checkbox appearance-none focus:outline-none border rounded-full border-gray-400 absolute cursor-pointer w-full h-full checked:border-none"
+                checked={option.label === value}
+                onChange={onChangeHandler}
               />
               <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1" />
             </div>
-            <p className="ml-3 text-md leading-4 font-normal text-gray-800 dark:text-gray-100">{option.label}</p>
+            <p className="ml-3 text-md leading-4 font-normal text-gray-800 dark:text-gray-100">
+              {option.label}
+            </p>
           </div>
         ))}
       <style>
@@ -27,7 +32,7 @@ const RadioInput = ({ options }) => {
         }
         `}
       </style>
-    </>
+    </div>
   );
 };
 export default RadioInput;
