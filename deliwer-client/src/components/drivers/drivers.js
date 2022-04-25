@@ -1,6 +1,6 @@
-import React from 'react';
-import DriversGrid from './drivers-grid/drivers-grid';
-import FilterPane from './filter-pane/filter-pane';
+import React from "react";
+import DriversGrid from "./drivers-grid/drivers-grid";
+import FilterPane from "./filter-pane/filter-pane";
 
 const Drivers = () => {
   return (
