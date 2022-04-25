@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import './app.css';
-import Bid from './components/bid/bid';
+import Bid from './components/bids/bid';
 import Contact from './components/contact/contact';
 import Dashboard from './components/dashboard/dashboard';
 import Drivers from './components/drivers/drivers';
@@ -10,9 +10,13 @@ import Home from './components/home/home';
 import Navigation from './components/navigation/navigation';
 import Track from './components/track/track';
 import Fonts from './styles/fonts';
+import Head from 'next/head';
 
 const App = () => (
   <Styles>
+    <Head>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </Head>
     <BrowserRouter>
       <Navigation />
       <Routes>
@@ -28,7 +32,7 @@ const App = () => (
 );
 
 const Styles = styled.div`
-  /* ${Fonts} */
+  ${Fonts}
 `;
 
 export default App;

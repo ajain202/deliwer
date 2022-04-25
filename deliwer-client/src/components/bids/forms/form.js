@@ -4,20 +4,46 @@ import DropdownInput from '../../resusable-controls/dropdown-input';
 import EditForm from './edit-form';
 import NewForm from './new-form';
 
-const Form = () => {
+const Form = ({ currentOrder, addNewBid }) => {
   const [activeForm, setActiveForm] = useState('new');
+  const [order, setOrder] = useState({
+    bidType: '',
+    bidAmount: '',
+    bidActiveDuration: '',
+    location: '',
+    sendToFavorites: false,
+  });
+
+  const onNewBidSubmitHandler = (e, order) => {
+    e.preventDefault();
+    addNewBid({
+      ...order,
+      orderId: Math.floor(100000 + Math.random() * 900000).toString(),
+      estimatedTime: 'Bid unaccepted',
+      status: 'bid-unaccepted',
+      contact: '',
+    });
+    setOrder({
+      bidType: '',
+      bidAmount: '',
+      bidActiveDuration: '',
+      location: '',
+      sendToFavorites: false,
+    });
+  };
+
   const bidTypeOptions = ['Single Order', 'Grouped Order', 'Hire Out'];
 
   return (
     <div className="card p-5">
-      <div className="w-full mx-0 h-12 shadow rounded bg-white">
+      <div className="w-full mx-0 h-12 shadow rounded">
         <ul className="flex px-5">
           <li
             onClick={() => setActiveForm('new')}
             className={
               activeForm === 'new'
                 ? 'text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12'
-                : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer'
+                : 'text-sm py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer'
             }
           >
             <div className="flex items-center mb-3">
@@ -46,11 +72,16 @@ const Form = () => {
           </li>
         </ul>
       </div>
-      <form className="grid grid-cols-2 gap-4 mt-8">
-        <div className="col-span-2">
-          <DropdownInput label="Bid Type" options={bidTypeOptions} />
+      <form className="flex flex-col gap-4 mt-4" onSubmit={(e) => onNewBidSubmitHandler(e, order)}>
+        <div>
+          <DropdownInput
+            label="Bid Type"
+            value={order.bidType}
+            setValue={(value) => setOrder({ ...order, bidType: value })}
+            options={bidTypeOptions}
+          />
         </div>
-        {activeForm === 'new' ? <NewForm /> : <EditForm />}
+        {activeForm === 'new' ? <NewForm order={order} setOrder={setOrder} /> : <EditForm currentOrder={currentOrder} />}
       </form>
     </div>
   );
