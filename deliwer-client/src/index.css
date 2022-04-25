@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --orange: #ff2020;
   --dark-navy: #020c1b;
   --navy: #0a192f;
   --light-navy: #0d2c5a;
@@ -18,7 +17,7 @@
   --lightest-gray: var(--light);
   --green: var(--cyan);
   --light-green: #64ffda;
-  --green-tint: rgba(23 162 184 /10%);
+  --green-tint: rgba(23 162 184/10%);
   --font-sans: Calibre, Roboto, -apple-system, system-ui, sans-serif;
   --font-mono: 'SF Mono', 'Roboto Mono', monospace;
   --fz-xxs: 12px;
@@ -41,7 +40,6 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/*
 html {
   font-size: var(--fz-xl);
 }
@@ -58,19 +56,19 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--lightest-gray);
+  background-color: var(--light-gray);
   color: var(--dark-slate);
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
   line-height: 1.3;
 }
 
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--slate);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 body::-webkit-scrollbar-track {
@@ -79,4 +77,4 @@ body::-webkit-scrollbar-track {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-} */
+}

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { activeOrders } from '../../dummy-data';
 import SearchBox from '../../resusable-controls/search-box';
 import OrderItem from './order-item';
 
-const ActiveOrders = () => {
+const ActiveOrders = ({ activeOrders, setCurrentOrder }) => {
   const [searchOrderID, setSearchOrderID] = useState('');
 
   const onChangeHandler = (e) => {
@@ -11,15 +10,13 @@ const ActiveOrders = () => {
   };
 
   return (
-    <div className="px-2 w-full">
-      <SearchBox placeholder="Order Id" onChangeHandler={onChangeHandler} />
-      <div className="mt-5 flex flex-col items-center justify-center w-full">
+    <div className="w-full">
+      <SearchBox placeholder="Search Active Orders" onChangeHandler={onChangeHandler} />
+      <div className="custom-scrollbar overflow-y-auto h- py-3 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center w-full">
         {activeOrders &&
           activeOrders
             .filter((order) => order.orderId.indexOf(searchOrderID) > -1)
-            .map((order) => (
-              <OrderItem key={order.orderId} orderId={order.orderId} estimatedTime={order.estimatedTime} status={order.status} />
-            ))}
+            .map((order) => <OrderItem key={order.orderId} order={order} setCurrentOrder={setCurrentOrder} />)}
       </div>
     </div>
   );

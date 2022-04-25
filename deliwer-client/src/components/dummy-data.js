@@ -1,28 +1,38 @@
-export const activeOrders = [
+export const activeOrdersArray = [
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
+    orderId: '124324',
     estimatedTime: '15 mins',
     status: 'bid-accepted',
+    contact: '312-232-1212',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
+    orderId: '434344',
     estimatedTime: '10 mins',
     status: 'in-transit',
+    contact: '434-434-5464',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
-    estimatedTime: '--',
+    orderId: '675435',
+    estimatedTime: 'Bid unaccepted',
     status: 'bid-unaccepted',
+    contact: '',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
+    orderId: '535422',
     estimatedTime: '12 mins',
     status: 'in-transit',
+    contact: '234-767-3477',
+    location: '1210 W Lexington St',
   },
   {
-    orderId: Math.floor(100000 + Math.random() * 900000).toString(),
+    orderId: '242465',
     estimatedTime: '20 mins',
     status: 'in-transit',
+    contact: '324-678-7676',
+    location: '1210 W Lexington St',
   },
 ];
 
