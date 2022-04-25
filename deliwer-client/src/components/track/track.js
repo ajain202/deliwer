@@ -2,7 +2,7 @@ import React from "react";
 import ActiveOrders from "./active-orders/active-orders";
 import Timeline from "./timeline/timeline";
 import Map from "./map/map";
-import { activeOrders } from "../dummy-data";
+import { activeOrdersArray } from "../dummy-data";
 
 const Track = () => {
   return (
@@ -11,7 +11,7 @@ const Track = () => {
         {/* Remove class [ h-24 ] when adding a card block */}
         {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
         <div className="active-orders md:col-span-1 h-auto overflow-y-auto">
-          <ActiveOrders activeOrders={activeOrders} />
+          <ActiveOrders activeOrders={activeOrdersArray} />
         </div>
 
         <div className="md:col-span-2 h-auto flex flex-col justify-between">
