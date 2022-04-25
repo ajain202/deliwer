@@ -1,19 +1,36 @@
 import React from "react";
 import { colors } from "tailwindcss/defaultTheme";
+import steps from '../../../assets/images/Steps.png';
+import steps2 from '../../../assets/images/Steps2.png';
+import steps3 from '../../../assets/images/Steps3.png';
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-const Timeline = () => {
-
+const Timeline = ({currOrder}) => {
+  let statusbid="incomplete"
+  let statustransit="incomplete"
+  let statusdelivered="incomplete"
+  if(currOrder.status==="bid-accepted"){
+     statusbid="ongoing"
+  }
+  else if (currOrder.status==="in-transit"){
+     statusbid="complete"
+     statustransit="ongoing"
+  }
+  else if (currOrder.status==="delivered"){
+    statusbid="complete"
+    statustransit="complete"
+    statusdelivered="complete"
+ };
   return (
     <div class="bg-gray-100 py-6 flex flex-wrap items-center justify-center">
       <div>
-        <Arrow status="complete" text1="Bid Accepted" />
+        <Arrow status={statusbid} text1="Bid Accepted" />
       </div>
       <div>
-        <Arrow status="ongoing" text1="Dispatched" />
+        <Arrow status={statustransit} text1="Dispatched" />
       </div>
       <div>
-        <Arrow status="incomplete" text1="Delivered" />
+        <Arrow status={statusdelivered} text1="Delivered" />
       </div>
     </div>
   );
@@ -33,7 +50,7 @@ const Arrow = ({ status, text1 }) => {
     <div class="w-52 h-16 relative md:mt-0 mt-4">
       {status === "complete" ? (
         <img
-          src="https://i.ibb.co/DwNs7zG/Steps.png"
+          src={steps}
           alt="step1"
           class="w-full h-full"
         />
@@ -42,7 +59,7 @@ const Arrow = ({ status, text1 }) => {
       )}
       {status === "ongoing" ? (
         <img
-          src="https://i.ibb.co/wNZ4nzy/Steps2.png"
+          src={steps2}
           alt="step2"
           class="w-full h-full"
         />
@@ -51,7 +68,7 @@ const Arrow = ({ status, text1 }) => {
       )}
       {status === "incomplete" ? (
         <img
-          src="https://i.ibb.co/c2k4Gbr/Steps3.png"
+          src={steps3}
           alt="step3"
           class="w-full h-full"
         />
