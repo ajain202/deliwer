@@ -24,10 +24,10 @@ function Statistics() {
 export const Stats = ({ label, stats }) => {
   return (
     <div className="w-full text-center">
-      <p className="text-xs md:text-sm font-medium leading-none text-gray-500 uppercase">
+      <p className="text-xs md:text-sm font-medium leading-none  uppercase">
         {label}
       </p>
-      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-3 text-gray-800 mt-3 md:mt-5">
+      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-3 -800 mt-3 md:mt-5">
         {stats}
       </p>
     </div>
