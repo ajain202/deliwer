@@ -15,8 +15,8 @@ const createRoutineMachineLayer = ({currOrder}) => {
     show: false,
     addWaypoints: false,
     routeWhileDragging: true,
-    draggableWaypoints: true,
-    fitSelectedRoutes: true,
+    draggableWaypoints: false,
+    fitSelectedRoutes:  currOrder.status==='bid-unaccepted'? false:true,
     showAlternatives: false,
   });
 
