@@ -9,6 +9,8 @@ export const activeOrdersArray = [
     orderId: '578383',
     sendToFavorites: true,
     status: 'bid-accepted',
+    lat:41.8696,
+    long:-87.6496,
   },
   {
     bidActiveDuration: '10 min',
@@ -20,6 +22,8 @@ export const activeOrdersArray = [
     orderId: '543341',
     sendToFavorites: false,
     status: 'in-transit',
+    lat:41.8746,
+    long:-87.6690,
   },
   {
     bidActiveDuration: '20 min',
@@ -31,6 +35,8 @@ export const activeOrdersArray = [
     orderId: '993642',
     sendToFavorites: true,
     status: 'bid-unaccepted',
+    lat:41.8696,
+    long:-87.6496,
   },
   {
     bidActiveDuration: '10 min',
@@ -42,6 +48,8 @@ export const activeOrdersArray = [
     orderId: '623562',
     sendToFavorites: false,
     status: 'bid-accepted',
+    lat:41.8746,
+    long:-87.6690,
   },
   {
     bidActiveDuration: '20 min',
@@ -53,6 +61,8 @@ export const activeOrdersArray = [
     orderId: '938463',
     sendToFavorites: true,
     status: 'in-transit',
+    lat:41.8696,
+    long:-87.6496,
   },
   {
     bidActiveDuration: '30 min',
@@ -64,6 +74,8 @@ export const activeOrdersArray = [
     orderId: '891990',
     sendToFavorites: true,
     status: 'bid-unaccepted',
+    lat:41.8746,
+    long:-87.6690,
   },
   {
     bidActiveDuration: '30 min',
@@ -75,6 +87,8 @@ export const activeOrdersArray = [
     orderId: '756376',
     sendToFavorites: true,
     status: 'bid-unaccepted',
+    lat:41.8696,
+    long:-87.6496,
   },
   {
     bidActiveDuration: '15 min',
@@ -86,6 +100,8 @@ export const activeOrdersArray = [
     orderId: '293403',
     sendToFavorites: false,
     status: 'bid-unaccepted',
+    lat:41.8746,
+    long:-87.6690,
   },
   {
     bidActiveDuration: '10 min',
@@ -97,6 +113,8 @@ export const activeOrdersArray = [
     orderId: '543087',
     sendToFavorites: true,
     status: 'bid-unaccepted',
+    lat:41.8696,
+    long:-87.6496,
   },
 ];
 

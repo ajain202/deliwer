@@ -23,7 +23,7 @@ const Track = ({ activeOrdersArray }) => {
 
         <div className="card p-3 md:col-span-2 h-auto flex flex-col justify-between">
           <div className="md:h-full h-[200px]">
-            <Map />
+            <Map currOrder={activeOrders.filter((e) => e.selected)[0]} />
           </div>
           <div>
             <Timeline currOrder={activeOrders.filter((e) => e.selected)[0]} />

@@ -56,4 +56,21 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+.bg {
+  position: relative;
+}
+
+.bg::before {
+  content: " ";
+  background-image: url("./assets/images/cycle.png");
+  position: absolute;
+  opacity: 0.8;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 60%;
 }
