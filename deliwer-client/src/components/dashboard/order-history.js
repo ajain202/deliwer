@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { pastOrders } from "../dummy-data";
+import React from 'react';
+import { pastOrders } from '../dummy-data';
 
 function OrderHistory() {
-  const [show, setShow] = useState(null);
   return (
-    <>
-      <div className="card mt-5 w-full">
-        <div className="card bg-white shadow w-full custom-scrollbar overflow-y-auto">
+    <div className="card px-2 mt-5">
+      <div className=" mt-5 w-full">
+        <div className="p-3 pl-2 rounded-tl-lg rounded-tr-lg">
+          <div className="sm:flex items-center justify-between">
+            <p className="text-base sm:text-base md:text-lg lg:text-2xl font-bold leading-normal">Order History</p>
+          </div>
+        </div>
+        <div className="bg-white shadow w-full custom-scrollbar overflow-y-auto">
           <table className="w-full whitespace-nowrap">
             <thead>
               <tr className="h-16 w-full text-sm leading-none">
@@ -26,9 +30,7 @@ function OrderHistory() {
                     </div>
                   </td>
                   <td className="pl-12">
-                    <p className="text-sm font-medium leading-none">
-                      {pastOrder.amount}
-                    </p>
+                    <p className="text-sm font-medium leading-none">{pastOrder.amount}</p>
                   </td>
                   <td className="pl-12">
                     <p className="font-medium">{pastOrder.bidType}</p>
@@ -56,7 +58,7 @@ function OrderHistory() {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

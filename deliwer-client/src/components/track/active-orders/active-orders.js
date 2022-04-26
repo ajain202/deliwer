@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SearchBox from '../../resusable-controls/search-box';
 import OrderItem from './order-item';
+import OrderLegend from './order-legend';
 
 const ActiveOrders = ({ activeOrders, onActiveOrderClickHandler }) => {
   const [searchOrderID, setSearchOrderID] = useState('');
@@ -11,6 +12,7 @@ const ActiveOrders = ({ activeOrders, onActiveOrderClickHandler }) => {
   return (
     <div className="w-full">
       <SearchBox placeholder="Search Active Orders" onChangeHandler={onChangeHandler} />
+      {/* <OrderLegend />  */}
       <div className="py-3 grid grid-cols-1 gap-4 items-center justify-center w-full">
         {activeOrders &&
           activeOrders

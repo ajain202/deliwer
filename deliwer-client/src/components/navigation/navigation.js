@@ -7,8 +7,8 @@ const Navigation = () => {
   const [show, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
   const [navOptions, setNavOptions] = useState([
-    { name: 'Bid', link: '/bid', icon: Coin, active: window.location.pathname === '/bid' },
-    { name: 'Track', link: '/track', icon: Gps, active: window.location.pathname === '/track' },
+    { name: 'Bids', link: '/bid', icon: Coin, active: window.location.pathname === '/bid' },
+    { name: 'Delivery Status', link: '/track', icon: Gps, active: window.location.pathname === '/track' },
     { name: 'Drivers', link: '/drivers', icon: SteeringWheel, active: window.location.pathname === '/drivers' },
     { name: 'Dashboard', link: '/dashboard', icon: LayoutGrid, active: window.location.pathname === '/dashboard' },
   ]);
@@ -37,9 +37,9 @@ const Navigation = () => {
           <div className="mx-auto container px-6 py-2 lg:py-0">
             <div className="flex items-center justify-between">
               <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
-                <Link to={'/'} className="flex items-center">
+                <Link to={'/'} className="flex items-center" onClick={() => setCurrentNav('home')}>
                   <Logo />
-                  <h2 className="text-base text-gray-700 font-bold leading-normal pl-3">DELIWER</h2>
+                  <h2 className="text-base font-bold leading-normal pl-3">DELIWER</h2>
                 </Link>
               </div>
               <div className="flex">
@@ -48,7 +48,7 @@ const Navigation = () => {
                     <Link
                       to={nav.link}
                       key={nav.name}
-                      className={`flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none transition duration-150 ease-in-out ${
+                      className={`flex px-5 items-center py-6 text-sm leading-5 hover:bg-gray-100 focus:bg-gray-100 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none transition duration-150 ease-in-out ${
                         nav.active ? 'border-b-2 border-b-indigo-700/50 bg-gray-100 text-indigo-700' : ''
                       }`}
                       onClick={() => setCurrentNav(nav.name)}

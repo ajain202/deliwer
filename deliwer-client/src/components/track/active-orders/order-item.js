@@ -7,17 +7,21 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
   const { orderId, status, contact, estimatedTime, location, selected } = order;
 
   let statusColor;
+  let statusText;
   if (status === 'bid-unaccepted') {
     statusColor = 'text-red-400';
+    statusText = 'Bid Unaccepted';
   } else if (status === 'bid-accepted') {
     statusColor = 'text-yellow-300';
+    statusText = 'Bid Accepted';
   } else {
     statusColor = 'text-green-400';
+    statusText = 'Delivering';
   }
 
   return (
     <div
-      className={`order-item-card noselect p-4 w-full cursor-pointer ${selected ? 'border-[1.5px] border-indigo-700/60' : 'border'}`}
+      className={`order-item-card noselect p-4 w-full cursor-pointer ${selected ? 'border-2 border-indigo-700/60' : 'border'}`}
       onClick={() => onActiveOrderClickHandler(orderId)}
     >
       <div className="flex items-center border-b border-gray-200 pb-2">
@@ -25,7 +29,7 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
           <div>
             <p className="text-lightest-navy text-base font-semibold">{`Order ${orderId}`}</p>
           </div>
-          <div className={`flex items-center text-sm ${statusColor}`}>
+          <div title={statusText} className={`flex items-center text-sm ${statusColor}`}>
             <FontAwesomeIcon icon={faCircle} />
           </div>
         </div>

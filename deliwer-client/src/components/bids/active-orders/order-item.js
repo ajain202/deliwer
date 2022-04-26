@@ -5,7 +5,7 @@ const OrderItem = ({ order, onEditOrderClickHandler, onDeleteOrderClickHandler }
   const { orderId, bidType, bidAmount, bidActiveDuration, location, sendToFavorites, selected } = order;
 
   return (
-    <div className={`order-item-card noselect p-4 w-full ${selected ? 'border-[1.5px] border-indigo-700/60' : 'border'}`}>
+    <div className={`order-item-card noselect p-4 w-full ${selected ? 'border-2 border-indigo-700/60' : 'border'}`}>
       <div className="flex items-center border-b-2 border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div>
