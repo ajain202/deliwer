@@ -61,7 +61,7 @@ const NewForm = ({ addNewBid }) => {
         </div>
         <div>
           <ToggleInput
-            label="Send to Favorites"
+            label="Send to Favorite Drivers"
             active={sendToFavorites}
             onChangeHandler={() => setBid({ ...bid, sendToFavorites: !sendToFavorites })}
             required

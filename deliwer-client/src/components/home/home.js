@@ -1,62 +1,48 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import cycleImage from '../../assets/images/cycle.png';
 
-const Button1 = ({ label }) => {
-  return (
-    <button
-      name={label}
-      type="submit"
-      className="px-5 py-2 bg-indigo-600 transition duration-150 ease-in-out hover:bg-indigo-700 rounded text-white text-sm rounded-3xl"
-    >
-      {label}
-    </button>
-  );
-};
 const Home = () => (
   <>
-    <Styles className="bg h-[85vh] w-full pt-3">
-      <div className="pl-16 pt-16er">
-        <h2>Deliwer.</h2>
-      </div>
-      <div className="pl-16">
-        <h3>Delivery made easy</h3>
-      </div>
-      <Link to={"/bid"}>
-        <div className="flex justify-end relative">
-          <Button1 label={"Place a Bid ->"}></Button1>
+    <Styles className="p-3 mt-10 md:mt-0 flex flex-col md:flex-row md:justify-around gap-10 items-center w-full md:h-[85vh] pt-3">
+      <div className="md:pl-12">
+        <div className="">
+          <p className="header-1">Deliwer</p>
+          <p className="header-2">Delivery made easy</p>
         </div>
-      </Link>
+        <Link to={'/bid'}>
+          <button
+            type="submit"
+            className="mt-10 px-6 py-2 bg-indigo-600 transition duration-150 ease-in-out hover:bg-indigo-700 text-white text-sm rounded-3xl"
+          >
+            Place a Bid
+          </button>
+        </Link>
+      </div>
+      <div className="md:pr-12 max-w-[300px] md:max-w-[500px]">
+        <img className="max-w-full object-contain" src={cycleImage} alt="Deliwer"></img>
+      </div>
     </Styles>
   </>
 );
 
 const Styles = styled.div`
-  h6 {
-    margin: 30px 0px;
-    font-family: var(--font-mono);
-    font-weight: 400;
-    color: var(--green);
-    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
-  }
-
-  h2 {
-    position: relative;
+  .header-1 {
+    color: var(--dark-slate);
+    font-weight: 600;
+    line-height: 1.1;
     margin: 0px 0px 10px 0px;
-    font-size: clamp(60px, 9vw, 90px);
+    font-size: clamp(40px, 8vw, 80px);
     color: var(--light-navy);
   }
-
-  h3 {
-    position: relative;
+  .header-2 {
+    color: var(--dark-slate);
+    font-weight: 600;
+    line-height: 1.1;
     margin: 0px 0px 20px 0px;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(30px, 8vw, 60px);
     line-height: 0.9;
-  }
-
-  p {
-    max-width: 500px;
-    margin: 0px 0px 50px 0px;
   }
 `;
 
