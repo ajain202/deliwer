@@ -13,7 +13,16 @@
   border-radius: 5px;
 }
 
-.order-item-card:hover {
+.driver-card {
+  transition: var(--transition);
+  box-shadow: 0 10px 14px -15px var(--navy-shadow);
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 5px;
+}
+
+.order-item-card:hover,
+.driver-card:hover {
   transform: translateY(-5px);
 }
 
@@ -39,9 +48,19 @@
 .custom-scrollbar::-webkit-scrollbar-track {
   background: var(--light-gray);
 }
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
 .bg {
   position: relative;
 }
+
 .bg::before {
   content: " ";
   background-image: url("./assets/images/cycle.png");

@@ -219,7 +219,15 @@ export const driversarray = [
     favorite: true,
     yourOrders: 66,
     totalOrders: 225,
-    rating: 4.6,
+    rating: 4.1,
     reviews: 200,
+  },
+  {
+    name: 'Jessica',
+    favorite: false,
+    yourOrders: 16,
+    totalOrders: 26,
+    rating: 3.5,
+    reviews: 10,
   },
 ];

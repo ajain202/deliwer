@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const RadioInput = ({ options, value, onChangeHandler }) => {
   return (
@@ -6,7 +6,7 @@ const RadioInput = ({ options, value, onChangeHandler }) => {
       {options &&
         options.map((option) => (
           <div key={option.label} className="flex items-center mb-4">
-            <div className="bg-white dark:bg-gray-100 rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
+            <div className="bg-white rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
               <input
                 value={option.label}
                 type="radio"
@@ -17,9 +17,7 @@ const RadioInput = ({ options, value, onChangeHandler }) => {
               />
               <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-full h-full z-1" />
             </div>
-            <p className="ml-3 text-md leading-4 font-normal text-gray-800 dark:text-gray-100">
-              {option.label}
-            </p>
+            <p className="ml-3 text-base leading-4">{option.label}</p>
           </div>
         ))}
       <style>
