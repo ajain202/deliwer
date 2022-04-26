@@ -11,7 +11,6 @@ function Graph() {
       20: "$20K",
       40: "$40K",
     };
-
     let line_chart = new Chart(document.getElementById("line_chart"), {
       type: "line",
       data: {
@@ -39,6 +38,7 @@ function Graph() {
       },
       options: {
         maintainAspectRatio: false,
+        responsive: true,
         legend: {
           display: false,
         },
@@ -66,11 +66,11 @@ function Graph() {
       <div className="card mt-5 w-full bg-white p-4 rounded-lg shadow">
         <div className="lg:flex justify-between w-full items-center">
           <div className="py-3 md:px-4 flex items-center bg-gray-50 rounded-xl">
-            <p className="text-xs font-medium leading-none text-center text-gray-500">
+            <p className="text-xs font-medium leading-none text-center">
               Show:
             </p>
             <div className="px-2 sm:px-3.5 border-r border-gray-300">
-              <p className="text-xs leading-none text-gray-800">Month</p>
+              <p className="text-xs leading-none">Month</p>
             </div>
             <div className="px-2 sm:px-3.5">
               <p className="text-xs font-bold leading-none text-indigo-700">
@@ -85,7 +85,7 @@ function Graph() {
             </div>
           </div>
         </div>
-        <div className="mt-8">
+        <div className="mt-8 h-80">
           <div className="chartjs-size-monitor">
             <div className="chartjs-size-monitor-expand">
               <div className />

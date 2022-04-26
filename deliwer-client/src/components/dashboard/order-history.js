@@ -9,7 +9,7 @@ function OrderHistory() {
         <div className="card bg-white shadow w-full custom-scrollbar overflow-y-auto">
           <table className="w-full whitespace-nowrap">
             <thead>
-              <tr className="h-16 w-full text-sm leading-none text-gray-800">
+              <tr className="h-16 w-full text-sm leading-none">
                 <th className="font-large text-left pl-4">Order ID</th>
                 <th className="font-large text-left pl-12">Amount</th>
                 <th className="font-large text-left pl-12">Type of Bid</th>
@@ -19,14 +19,14 @@ function OrderHistory() {
             </thead>
             <tbody className="w-full">
               {pastOrders.map((pastOrder) => (
-                <tr className="h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                <tr className="h-20 text-sm leading-none bg-white hover:bg-gray-100 border-b border-t border-gray-100">
                   <td className="pl-4 cursor-pointer">
                     <div className="flex items-center">
                       <p className="font-medium">{pastOrder.orderId}</p>
                     </div>
                   </td>
                   <td className="pl-12">
-                    <p className="text-sm font-medium leading-none text-gray-800">
+                    <p className="text-sm font-medium leading-none">
                       {pastOrder.amount}
                     </p>
                   </td>
