@@ -17,13 +17,13 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
 
   return (
     <div
-      className={`order-item-card p-4 w-full cursor-pointer ${selected ? 'border-[1.5px] border-indigo-700/60' : 'border'}`}
+      className={`order-item-card noselect p-4 w-full cursor-pointer ${selected ? 'border-[1.5px] border-indigo-700/60' : 'border'}`}
       onClick={() => onActiveOrderClickHandler(orderId)}
     >
       <div className="flex items-center border-b border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div>
-            <p className="text-lightest-navy text-base font-semibold leading">{`Order ${orderId}`}</p>
+            <p className="text-lightest-navy text-base font-semibold">{`Order ${orderId}`}</p>
           </div>
           <div className={`flex items-center text-sm ${statusColor}`}>
             <FontAwesomeIcon icon={faCircle} />
@@ -45,15 +45,11 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
       {status !== 'bid-unaccepted' && (
         <div className="text-sm pt-4 flex justify-between">
           <div className="flex items-center">
-            <span>
-              <Phone strokeWidth={2} />
-            </span>
+            <Phone strokeWidth={2} />
             <span className="ml-1">{contact}</span>
           </div>
           <div className="flex items-center text-indigo-500 hover:text-indigo-700">
-            <span>
-              <MessageCircle strokeWidth={2} />
-            </span>
+            <MessageCircle strokeWidth={2} />
             <span className="ml-1">Chat</span>
           </div>
         </div>
