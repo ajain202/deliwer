@@ -1,51 +1,59 @@
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Edit, Phone } from 'tabler-icons-react';
+import { Edit, Trash } from 'tabler-icons-react';
 
-const OrderItem = ({ order, setCurrentOrder }) => {
-  console.log('order', order);
-  const { orderId, status, contact, estimatedTime } = order;
-
-  let statusColor;
-  if (status === 'bid-unaccepted') {
-    statusColor = 'text-red-500';
-  } else if (status === 'bid-accepted') {
-    statusColor = 'text-yellow-500';
-  } else {
-    statusColor = 'text-green-500';
-  }
+const OrderItem = ({ order, onEditOrderClickHandler, onDeleteOrderClickHandler }) => {
+  const { orderId, bidType, bidAmount, bidActiveDuration, location, sendToFavorites, selected } = order;
 
   return (
-    <div className="order-item-card p-4 w-full border">
-      <div className="flex items-center border-b border-gray-200 pb-2">
+    <div className={`order-item-card p-4 w-full ${selected ? 'border-[1.5px] border-indigo-700/60' : 'border'}`}>
+      <div className="flex items-center border-b-2 border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div>
-            <p className="text-xl font-medium leading">{`Order ${orderId}`}</p>
+            <p className="text-lightest-navy text-base font-semibold leading">{`Order ${orderId}`}</p>
           </div>
-          <div>
-            <div className={`flex items-center text-sm ${statusColor}`}>
-              <FontAwesomeIcon icon={faCircle} />
+          <div className="flex gap-2">
+            <div
+              onClick={() => onEditOrderClickHandler(orderId)}
+              className="text-base flex items-center cursor-pointer text-indigo-500 hover:text-indigo-700"
+              title="Edit Bid"
+            >
+              <Edit strokeWidth={2} />
+            </div>
+            <div
+              onClick={() => onDeleteOrderClickHandler(orderId)}
+              className="text-base flex items-center cursor-pointer text-red-400 hover:text-red-600"
+              title="Delete Bid"
+            >
+              <Trash strokeWidth={2} />
             </div>
           </div>
         </div>
       </div>
       <div>
-        <p className="text-base leading-4 py-4 font-medium">{`ETA ${estimatedTime}`}</p>
-        <div className="pt-4 flex justify-between">
-          <div className="flex items-center">
-            <span>
-              <Phone strokeWidth={1.5} />
-            </span>
-            <span className="ml-1 font-normal">{contact}</span>
-          </div>
-          <div className="flex items-center cursor-pointer hover:text-indigo-600" onClick={setCurrentOrder(order)}>
-            <span>
-              <Edit strokeWidth={1.5} />
-            </span>
-            <span className="ml-1 font-normal">Edit</span>
-          </div>
-        </div>
+        <p className="text-sm leading-4 pt-3">
+          <span className="font-medium">Status: </span>
+          Bid Unaccepted
+        </p>
+        <p className="text-sm leading-4 pt-2">
+          <span className="font-medium">Type: </span>
+          {bidType}
+        </p>
+        <p className="text-sm leading-4 pt-2">
+          <span className="font-medium">Amount: </span>
+          {bidAmount}
+        </p>
+        <p className="text-sm leading-4 pt-2">
+          <span className="font-medium">Active Duration: </span>
+          {bidActiveDuration}
+        </p>
+        <p className="text-sm leading-4 pt-2">
+          <span className="font-medium">Location: </span>
+          {location}
+        </p>
+        <p className="text-sm leading-4 pt-2">
+          <span className="font-medium">Send to Favorites: </span>
+          {sendToFavorites ? 'Yes' : 'No'}
+        </p>
       </div>
     </div>
   );

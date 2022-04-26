@@ -28,6 +28,8 @@ const Navigation = () => {
     );
   };
 
+  console.log('navOptions', navOptions);
+
   return (
     <>
       <div className="bg-gray-200 h-full w-full">
@@ -41,7 +43,7 @@ const Navigation = () => {
                 </Link>
               </div>
               <div className="flex">
-                <div className="flex md:mr-6 lg:mr-32">
+                <div className="flex md:mr-6 lg:mr-16 xl:mr-32">
                   {navOptions.map((nav) => (
                     <Link
                       to={nav.link}
@@ -62,7 +64,7 @@ const Navigation = () => {
                   <div className="ml-6 relative">
                     <div className="flex items-center relative" onClick={() => setProfile(!profile)}>
                       {profile && (
-                        <ul className="p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-16 ">
+                        <ul className="z-10 p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-14 ">
                           {profileNavOptions.map((nav) => (
                             <li
                               key={nav.name}
@@ -80,7 +82,7 @@ const Navigation = () => {
                       )}
                       <div className="cursor-pointer flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
                         <img
-                          className="rounded-full h-10 w-10 object-cover"
+                          className="rounded-full h-8 w-8 object-cover"
                           src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_2.png"
                           alt="logo"
                         />
@@ -159,7 +161,7 @@ const Navigation = () => {
                             src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png"
                             className="w-8 h-8 rounded-md"
                           />
-                          <p className=" text-gray-800 text-base leading-4 ml-2">Jane Doe</p>
+                          <p className=" text-gray-800 text-base leading-4 ml-2">User</p>
                         </div>
                         <ul className="flex">
                           <li className="cursor-pointer text-gray-800 pt-5 pb-3">
