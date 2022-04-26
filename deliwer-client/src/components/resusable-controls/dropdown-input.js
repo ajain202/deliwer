@@ -13,7 +13,9 @@ const DropdownInput = ({ label, options, value, setValue, required, placeholder,
     <div className="relative">
       <label className="text-sm leading-none">{label}</label>
       <div
-        className="w-full p-[10px] mt-2 border rounded border-gray-200 focus:outline-none focus:border-gray-600 flex items-center justify-between cursor-pointer"
+        className={`w-full p-[10px] mt-2 border rounded ${
+          showOptions ? 'border-indigo-600' : 'border-gray-200'
+        } focus:outline-none  flex items-center justify-between cursor-pointer`}
         onClick={() => setShowOptions(!showOptions)}
       >
         <p className="text-sm leading-3 tracking-normal font-medium">{value}</p>
