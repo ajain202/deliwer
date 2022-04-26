@@ -20,13 +20,16 @@ export default function Expenditure() {
                 }}
               />
             </p>
-            <p className="text-md leading-3 pt-4 pb-1">This Month</p>
-            <p className="text-base font-medium leading-none">
-              {month.filter((m) => m.month === currentMonth)[0].expenses + " $"}
+            <p className="text-md leading-3 pt-4 pb-1">
+              Monthly Expenditure:{" "}
+              <span className="text-base font-medium leading-none">
+                {month.filter((m) => m.month === currentMonth)[0].expenses +
+                  "$"}
+              </span>
             </p>
             <p className="text-md leading-none pt-5">
               {month.filter((m) => m.month === currentMonth)[0].delta +
-                " % less than last month"}
+                "% less than last month"}
             </p>
           </div>
         </div>
