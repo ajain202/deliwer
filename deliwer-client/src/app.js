@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import './app.css';
-import Bid from './components/bids/bid';
+import Bids from './components/bids/bids';
 import Contact from './components/contact/contact';
 import Dashboard from './components/dashboard/dashboard';
 import Drivers from './components/drivers/drivers';
@@ -21,7 +21,7 @@ const App = () => (
       <Navigation />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/bid" exact element={<Bid />} />
+        <Route path="/bid" exact element={<Bids />} />
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/dashboard" exact element={<Dashboard />} />
         <Route path="/drivers" exact element={<Drivers />} />

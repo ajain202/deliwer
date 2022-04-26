@@ -1,6 +1,7 @@
 .card {
   background-color: theme("colors.white");
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 5px;
 }
 
 .order-item-card {
@@ -8,17 +9,17 @@
   box-shadow: 0 10px 14px -15px var(--navy-shadow);
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
   border-radius: 5px;
 }
 
 .order-item-card:hover {
   transform: translateY(-5px);
 }
-.leaflet-top.leaflet-right{
+.leaflet-top.leaflet-right {
   display: none;
 }
-#mapId{
+#mapId {
   z-index: 0;
 }
 
@@ -35,3 +36,5 @@
 .custom-scrollbar::-webkit-scrollbar-track {
   background: var(--light-gray);
 }
+
+
