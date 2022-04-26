@@ -1,51 +1,34 @@
-import React, { useState } from "react";
-import ActiveOrders from "./active-orders/active-orders";
-import Timeline from "./timeline/timeline";
-import Map from "./map/map";
-import { activeOrdersArray } from "../dummy-data";
+import React, { useState } from 'react';
+import ActiveOrders from './active-orders/active-orders';
+import Map from './map/map';
+import Timeline from './timeline/timeline';
 
-const Track = () => {
-  const [activeOrders, setActiveOrders] = useState(activeOrdersArray.map((order,index)=>(index===0 ? {...order,selected:true}:{...order,selected:false})))
+const Track = ({ activeOrdersArray }) => {
+  const [activeOrders, setActiveOrders] = useState(
+    activeOrdersArray.map((order, index) => (index === 0 ? { ...order, selected: true } : { ...order, selected: false }))
+  );
 
   const onActiveOrderClickHandler = (orderId) => {
-    setActiveOrders(activeOrders.map((order)=>orderId===order.orderId?{...order,selected:true}:{...order,selected:false} ))
-  }
+    setActiveOrders(
+      activeOrders.map((order) => (orderId === order.orderId ? { ...order, selected: true } : { ...order, selected: false }))
+    );
+  };
 
-  // console.log(activeOrders)
   return (
     <>
-      <div className="container grid grid-cols-1 md:grid-cols-3 p-6 gap-6 md:h-[80vh] min-w-full">
-        {/* Remove class [ h-24 ] when adding a card block */}
-        {/* Remove class [ border-gray-300  dark:border-gray-700 border-dashed border-2 ] to remove dotted border */}
-        <div className="active-orders md:col-span-1 h-auto overflow-y-auto">
-          <ActiveOrders activeOrders={activeOrders} onActiveOrderClickHandler={onActiveOrderClickHandler}/>
+      <div className="container p-3 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 md:h-[90vh] min-w-full">
+        <div className="custom-scrollbar md:pr-2 md:col-span-1 h-auto overflow-y-auto">
+          <ActiveOrders activeOrders={activeOrders} onActiveOrderClickHandler={onActiveOrderClickHandler} />
         </div>
 
-        <div className="md:col-span-2 h-auto flex flex-col justify-between">
+        <div className="card p-3 md:col-span-2 h-auto flex flex-col justify-between">
           <div className="md:h-full h-[200px]">
             <Map />
           </div>
           <div>
-            <Timeline currOrder={activeOrders.filter((e)=>e.selected)[0]}/>
+            <Timeline currOrder={activeOrders.filter((e) => e.selected)[0]} />
           </div>
         </div>
-
-        <style>
-          {" "}
-          <style>{`
-.active-orders::-webkit-scrollbar {
-  width: 5px;
-}
-
-.active-orders::-webkit-scrollbar-thumb {
-  background-color: var(--slate);
-  border-radius: 5px;
-}
-
-.active-orders::-webkit-scrollbar-track {
-  background: var(--light-gray);
-}`}</style>
-        </style>
       </div>
     </>
   );

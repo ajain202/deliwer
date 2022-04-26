@@ -12,9 +12,10 @@ const ActiveOrders = ({ activeOrders, onEditBidClickHandler, onDeleteOrderClickH
   return (
     <div className="w-full">
       <SearchBox placeholder="Search Active Orders" onChangeHandler={onSearchBoxChangeHandler} />
-      <div className="custom-scrollbar overflow-y-auto h- py-3 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center w-full">
+      <div className="py-3 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center w-full">
         {activeOrders &&
           activeOrders
+            .filter((order) => order.status === 'bid-unaccepted')
             .filter((order) => order.orderId.indexOf(searchOrderID) > -1)
             .map((order) => (
               <OrderItem

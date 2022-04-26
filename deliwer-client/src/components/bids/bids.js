@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { activeOrdersArray } from '../dummy-data';
 import ActiveOrders from './active-orders/active-orders';
 import Form from './forms/form';
 
-const Bids = () => {
-  const [activeOrders, setActiveOrders] = useState(activeOrdersArray.map((order) => ({ ...order, selected: false })));
+const Bids = ({ activeOrders, setActiveOrders }) => {
   const [activeForm, setActiveForm] = useState('new');
 
   const addNewBid = (newBid) => {
