@@ -3,7 +3,7 @@ import Button from '../../resusable-controls/button';
 import DropdownInput from '../../resusable-controls/dropdown-input';
 import TextInput from '../../resusable-controls/text-input';
 import ToggleInput from '../../resusable-controls/toggle-input';
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
 const NewForm = ({ addNewBid }) => {
   const [bid, setBid] = useState({
@@ -19,10 +19,10 @@ const NewForm = ({ addNewBid }) => {
 
   const onSubmitHandler = (e, order) => {
     e.preventDefault();
-    const orderId=Math.floor(100000 + Math.random() * 900000).toString()
+    const orderId = Math.floor(100000 + Math.random() * 900000).toString();
     addNewBid({
       ...order,
-      orderId:orderId ,
+      orderId: orderId,
       estimatedTime: 'Bid unaccepted',
       status: 'bid-unaccepted',
       contact: '',
@@ -34,7 +34,7 @@ const NewForm = ({ addNewBid }) => {
       location: '',
       sendToFavorites: false,
     });
-    toast.success(`Bid Placed with order id: ${orderId}`);
+    toast.success(`Bid placed with order id: ${orderId}`);
   };
 
   return (
