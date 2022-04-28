@@ -10,7 +10,7 @@ const DriversGrid = ({ searchParam, favorites, sortByValue }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
       {drivers
         ?.filter((driver) => driver.name.toLowerCase().indexOf(searchParam) > -1)
         .filter((driver) => (favorites ? driver.favorite && driver : driver))

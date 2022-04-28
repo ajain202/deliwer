@@ -46,6 +46,7 @@ const NewForm = ({ addNewBid }) => {
             value={bidType}
             setValue={(value) => setBid({ ...bid, bidType: value })}
             options={bidTypeOptions}
+            required
           />
         </div>
         <div>
@@ -57,6 +58,7 @@ const NewForm = ({ addNewBid }) => {
             value={bidActiveDuration}
             setValue={(value) => setBid({ ...bid, bidActiveDuration: value })}
             options={bidActiveDurationOptions}
+            required
           />
         </div>
         <div>

@@ -12,7 +12,7 @@ const ActiveOrders = ({ activeOrders, onEditBidClickHandler, onDeleteOrderClickH
   return (
     <div className="w-full">
       <SearchBox placeholder="Search Active Orders" onChangeHandler={onSearchBoxChangeHandler} />
-      <div className="py-3 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center justify-center w-full">
+      <div className="py-3 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 items-center justify-center w-full">
         {activeOrders &&
           activeOrders
             .filter((order) => order.status === 'bid-unaccepted')

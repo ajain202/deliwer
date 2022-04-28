@@ -41,7 +41,6 @@ const Bids = ({ activeOrders, setActiveOrders }) => {
     toast.error(`Bid with order id:${orderId} deleted`);
   };
 
-  console.log('activeOrders', activeOrders);
   return (
     <>
       <div className="container p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-3 gap-8 md:gap-4 min-w-full">

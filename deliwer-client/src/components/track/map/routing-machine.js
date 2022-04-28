@@ -5,8 +5,7 @@ import 'leaflet-routing-machine';
 const createRoutineMachineLayer = ({currOrder}) => {
   let lat= currOrder.status==='bid-unaccepted'? 41.8717:currOrder.lat
   let long=currOrder.status==='bid-unaccepted'? -87.6602:currOrder.long
-  // console.log(lat)
-  // console.log(long)
+
   let instance = L.Routing.control({
     waypoints: [L.latLng(41.8717, -87.6602), L.latLng(lat, long)],
     lineOptions: {
