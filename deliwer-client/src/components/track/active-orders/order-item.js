@@ -29,7 +29,7 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
           <div>
             <p className="text-lightest-navy text-base font-semibold">{`Order ${orderId}`}</p>
           </div>
-          <div title={statusText} className={`flex items-center text-sm ${statusColor}`}>
+          <div title={statusText} className={`flex items-center text-lg ${statusColor}`}>
             <FontAwesomeIcon icon={faCircle} />
           </div>
         </div>

@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Coin, Gps, Help, LayoutGrid, Menu2, Settings, SteeringWheel, User, X } from 'tabler-icons-react';
 import Logo from '../../assets/icons/logo';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
-  const [navOptions, setNavOptions] = useState([
-    { name: 'Bids', link: '/bid', icon: Coin, active: window.location.pathname === '/bid' },
-    { name: 'Delivery Status', link: '/track', icon: Gps, active: window.location.pathname === '/track' },
-    { name: 'Drivers', link: '/drivers', icon: SteeringWheel, active: window.location.pathname === '/drivers' },
-    { name: 'Dashboard', link: '/dashboard', icon: LayoutGrid, active: window.location.pathname === '/dashboard' },
-  ]);
-
+  const [navOptions, setNavOptions] = useState([]);
   const profileNavOptions = [
     { name: 'My Profile', link: '/profile', icon: User },
     { name: 'Help Center', link: '/help', icon: Help },
     { name: 'Account Settings', link: '/settings', icon: Settings },
   ];
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setNavOptions([
+      { name: 'Bids', link: '/bid', icon: Coin, active: window.location.pathname === '/bid' },
+      { name: 'Delivery Status', link: '/track', icon: Gps, active: window.location.pathname === '/track' },
+      { name: 'Drivers', link: '/drivers', icon: SteeringWheel, active: window.location.pathname === '/drivers' },
+      { name: 'Dashboard', link: '/dashboard', icon: LayoutGrid, active: window.location.pathname === '/dashboard' },
+    ]);
+  }, [navigate]);
 
   const setCurrentNav = (clickedNav) => {
     setNavOptions(
@@ -27,8 +32,6 @@ const Navigation = () => {
       })
     );
   };
-
-  console.log('navOptions', navOptions);
 
   return (
     <>

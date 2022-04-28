@@ -5,7 +5,6 @@ import Graph from './graph';
 import OrderHistory from './order-history';
 
 const Dashboard = () => {
-  console.log('dashboard');
   return (
     <>
       <div className="container grid grid-cols-1 md:grid-cols-5 p-3 gap-6 md:h-[90vh] min-w-full">

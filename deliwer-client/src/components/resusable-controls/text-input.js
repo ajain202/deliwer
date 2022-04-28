@@ -3,7 +3,7 @@ import React from 'react';
 const TextInput = ({ label, required, placeholder, value, onChangeHandler, readOnly }) => {
   return (
     <>
-      {label && <label className="mb-2 inline-block text-sm leading-none">{label}</label>}
+      {label && <label className={`mb-2 inline-block text-sm leading-none ${required && 'required'}`}>{label}</label>}
       <input
         type="text"
         tabIndex="0"

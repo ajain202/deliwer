@@ -11,7 +11,7 @@ const DropdownInput = ({ label, options, value, setValue, required, placeholder,
 
   return (
     <div className="relative">
-      <label className="text-sm leading-none">{label}</label>
+      <label className={`text-sm leading-none ${required && 'required'}`}>{label}</label>
       <div
         className={`w-full p-[10px] mt-2 border rounded ${
           showOptions ? 'border-indigo-600' : 'border-gray-200'
@@ -21,7 +21,7 @@ const DropdownInput = ({ label, options, value, setValue, required, placeholder,
         <p className="text-sm leading-3 tracking-normal font-medium">{value}</p>
         <div className="cursor-pointer">{showOptions ? <ChevronUp strokeWidth={1.5} /> : <ChevronDown strokeWidth={1.5} />}</div>
       </div>
-      <input required value={value} readOnly className="-z-50 absolute top-12 left-5" />
+      <input required={required} value={value} readOnly className="-z-50 absolute top-12 left-5" />
       {showOptions && (
         <ul className="visible z-10 transition duration-300 opacity-100 bg-white shadow rounded mt-2 pb-1 w-full absolute">
           {options.map((option) => (

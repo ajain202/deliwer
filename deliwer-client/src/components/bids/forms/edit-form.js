@@ -42,11 +42,9 @@ const EditForm = ({ order, editBid, cancelEditBid }) => {
           <DropdownInput
             label="Bid Type"
             value={bidType}
-            setValue={(value) => {
-              console.log('value', value);
-              return setBid({ ...bid, bidType: value });
-            }}
+            setValue={(value) => setBid({ ...bid, bidType: value })}
             options={bidTypeOptions}
+            required
           />
         </div>
         <div>
@@ -58,6 +56,7 @@ const EditForm = ({ order, editBid, cancelEditBid }) => {
             value={bidActiveDuration}
             setValue={(value) => setBid({ ...bid, bidActiveDuration: value })}
             options={bidActiveDurationOptions}
+            required
           />
         </div>
         <div>
@@ -68,7 +67,6 @@ const EditForm = ({ order, editBid, cancelEditBid }) => {
             label="Send to Favorite Drivers"
             active={sendToFavorites}
             onChangeHandler={() => setBid({ ...bid, sendToFavorites: !sendToFavorites })}
-            required
           />
         </div>
         <div className="mt-3 flex justify-around">
