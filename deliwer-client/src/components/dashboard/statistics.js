@@ -2,9 +2,9 @@ import React from "react";
 
 function Statistics() {
   const statsData = [
-    { label: "Active", stats: "14" },
-    { label: "Completed", stats: "57" },
-    { label: "Spent", stats: "$1375" },
+    { label: "Active Orders", stats: "14" },
+    { label: "Completed Orders", stats: "57" },
+    { label: "OverAll Spent", stats: "$1375" },
   ];
 
   return (

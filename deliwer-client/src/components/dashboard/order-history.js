@@ -17,7 +17,6 @@ function OrderHistory() {
                 <th className="font-large text-left pl-4">Order ID</th>
                 <th className="font-large text-left pl-12">Amount</th>
                 <th className="font-large text-left pl-12">Type of Bid</th>
-                <th className="font-large text-left pl-12">Location</th>
                 <th className="font-large text-left px-12">Drivers</th>
               </tr>
             </thead>
@@ -34,10 +33,6 @@ function OrderHistory() {
                   </td>
                   <td className="pl-12">
                     <p className="font-medium">{pastOrder.bidType}</p>
-                  </td>
-                  <td className="pl-12">
-                    <p className="font-medium">{pastOrder.address}</p>
-                    <p> {pastOrder.city}</p>
                   </td>
                   <td className="px-12">
                     <div className="flex items-center">

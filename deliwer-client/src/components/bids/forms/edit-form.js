@@ -3,6 +3,7 @@ import Button from '../../resusable-controls/button';
 import DropdownInput from '../../resusable-controls/dropdown-input';
 import TextInput from '../../resusable-controls/text-input';
 import ToggleInput from '../../resusable-controls/toggle-input';
+import toast from "react-hot-toast";
 
 const EditForm = ({ order, editBid, cancelEditBid }) => {
   const [bid, setBid] = useState({ ...order });
@@ -19,6 +20,7 @@ const EditForm = ({ order, editBid, cancelEditBid }) => {
     e.preventDefault();
     if (e.nativeEvent.submitter.name === 'Update Bid') {
       editBid(order);
+      toast.success(`Bid with order id: ${order.orderId} updated`);
     } else {
       cancelEditBid();
     }

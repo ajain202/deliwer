@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import ActiveOrders from './active-orders/active-orders';
 import Form from './forms/form';
-
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 const Bids = ({ activeOrders, setActiveOrders }) => {
   const [activeForm, setActiveForm] = useState('new');
 
   const addNewBid = (newBid) => {
     setActiveOrders([
-      ...activeOrders,
       {
         ...newBid,
         selected: false,
       },
+      ...activeOrders,
     ]);
   };
 
@@ -37,6 +38,7 @@ const Bids = ({ activeOrders, setActiveOrders }) => {
       setActiveForm('new');
     }
     setActiveOrders(activeOrders.filter((order) => order.orderId !== orderId));
+    toast.error(`Bid with order id:${orderId} deleted`);
   };
 
   console.log('activeOrders', activeOrders);
@@ -61,6 +63,7 @@ const Bids = ({ activeOrders, setActiveOrders }) => {
           ></Form>
         </div>
       </div>
+      <Toaster />
     </>
   );
 };
