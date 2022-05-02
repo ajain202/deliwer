@@ -1,11 +1,27 @@
 import React from 'react';
 import { Edit, Trash } from 'tabler-icons-react';
 
-const OrderItem = ({ order, onEditOrderClickHandler, onDeleteOrderClickHandler }) => {
-  const { orderId, bidType, bidAmount, bidActiveDuration, location, sendToFavorites, selected } = order;
+const OrderItem = ({
+  order,
+  onEditOrderClickHandler,
+  onDeleteOrderClickHandler,
+}) => {
+  const {
+    orderId,
+    bidType,
+    bidAmount,
+    bidActiveDuration,
+    location,
+    sendToFavorites,
+    selected,
+  } = order;
 
   return (
-    <div className={`order-item-card noselect p-4 w-full ${selected ? 'border-2 border-indigo-700/60' : 'border'}`}>
+    <div
+      className={`order-item-card noselect p-4 w-full ${
+        selected ? 'border-2 border-indigo-700/60' : 'border'
+      }`}
+    >
       <div className="flex items-center border-b-2 border-gray-200 pb-2">
         <div className="flex justify-between w-full">
           <div>
@@ -30,6 +46,10 @@ const OrderItem = ({ order, onEditOrderClickHandler, onDeleteOrderClickHandler }
         </div>
       </div>
       <div>
+        <p className="text-base leading-4 pt-2">
+          <span className="font-medium text-inherit">Active Duration: </span>
+          <span className="font-black">{bidActiveDuration}</span>
+        </p>
         <p className="text-sm leading-4 pt-3">
           <span className="font-medium">Status: </span>
           Bid Unaccepted
@@ -41,10 +61,6 @@ const OrderItem = ({ order, onEditOrderClickHandler, onDeleteOrderClickHandler }
         <p className="text-sm leading-4 pt-2">
           <span className="font-medium">Amount: </span>
           {bidAmount}
-        </p>
-        <p className="text-sm leading-4 pt-2">
-          <span className="font-medium">Active Duration: </span>
-          {bidActiveDuration}
         </p>
         <p className="text-sm leading-4 pt-2">
           <span className="font-medium">Location: </span>

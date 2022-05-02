@@ -21,7 +21,9 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
 
   return (
     <div
-      className={`order-item-card noselect p-4 w-full cursor-pointer ${selected ? 'border-2 border-indigo-700/60' : 'border'}`}
+      className={`order-item-card noselect p-4 w-full cursor-pointer ${
+        selected ? 'border-2 border-indigo-700/60' : 'border'
+      }`}
       onClick={() => onActiveOrderClickHandler(orderId)}
     >
       <div className="flex items-center border-b border-gray-200 pb-2">
@@ -29,17 +31,28 @@ const OrderItem = ({ order, onActiveOrderClickHandler }) => {
           <div>
             <p className="text-lightest-navy text-base font-semibold">{`Order ${orderId}`}</p>
           </div>
-          <div title={statusText} className={`flex items-center text-lg ${statusColor}`}>
+          <div
+            title={statusText}
+            className={`flex items-center text-lg ${statusColor}`}
+          >
             <FontAwesomeIcon icon={faCircle} />
           </div>
         </div>
       </div>
       <div>
-        <p className="text-sm leading-4 pt-2">
-          {status === 'bid-unaccepted' ? <span className="font-medium">Bid Unaccepted</span> : <></>}
-          {status === 'bid-accepted' ? <span className="font-medium">Reaching in: </span> : <></>}
-          {status === 'in-transit' ? <span className="font-medium">Delivering in: </span> : <></>}
-          {status !== 'bid-unaccepted' && estimatedTime}
+        <p className="text-base leading-4 pt-2">
+          {status === 'bid-unaccepted' && (
+            <span className="font-medium">Bid Unaccepted</span>
+          )}
+          {status === 'bid-accepted' && (
+            <span className="font-medium">Reaching in: </span>
+          )}
+          {status === 'in-transit' && (
+            <span className="font-medium">Delivering in: </span>
+          )}
+          <span className="font-black">
+            {status !== 'bid-unaccepted' && estimatedTime}
+          </span>
         </p>
         <p className="text-sm leading-4 pt-2">
           <span className="font-medium">Location: </span>
