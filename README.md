@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Deliwer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+This is the source code for [Deliwer](https://vedda121.github.io/deliwer/), a local-delivery platform.
+The application was bootstrapped using react.
+The application makes use of Tailwind CSS, which is a utility-first CSS framework.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+1. Install the latest version of Node.js [Node.js LTS release](https://nodejs.org/en/) (To ensure full compatibility, it is recommended to use Node Version v14.xx)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Recommended Editors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   - [VSCode Editor](https://code.visualstudio.com/download)
 
-### `npm test`
+## How to run this application locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone or Download this repository.
+2. Open it up in VSCode.
+3. Move to the root folder - deliwer. Make sure this folder contains package.json file.
+4. Open the terminal once you're in the root folder.
+5. Run `npm i` to install all the dependencies.
+6. Run `npm run start` to run the application. This should start the project
+7. Once this is done, the site should open up in your default browser.
 
-### `npm run build`
+## Video demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Video Demo](video-demo/UndoThenRedo-working.mp4)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Mayur Mule
 
-### `npm run eject`
+  1. Setup Navigation Bar.
+  2. Bid Page Component.
+  3. reusable-controls - button, dropdown-input.
+  4. Search and filtering functionality throught the site.
+  5. Mock Data Generation.
+  6. Final Styling Improvements.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Aakash Jain
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  1. Delivery Status Component.
+  2. Drivers Component.
+  3. reusable-controls - search-box, toggle-inputs.
+  4. Prompts - Field validation and form submit.
+  5. Mock Data Generation.
+  6. Testing and Debugging.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Vedant Maheshwari
+  1. Initial Project Setup.
+  2. Dashboard Component.
+  3. Home Page Component.
+  4. reusable-controls - radio-input, text-input.
+  5. Mock Data Generation.
+  6. Web Hosting.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## References
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind UI Kit](https://tailwinduikit.com/)
+- [React](https://reactjs.org/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Leaflet](https://leafletjs.com/)
+- [Chart.js](https://www.chartjs.org/)
+- [styled-components](https://styled-components.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Tabler Icons](https://tabler-icons-react.vercel.app/)
+- [react-hot-toast](https://react-hot-toast.com/)
