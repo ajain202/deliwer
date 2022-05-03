@@ -1,0 +1,55 @@
+{
+  "name": "deliwer",
+  "homepage": "https://vedda121.github.io/deliwer",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Mayur Mule <mmule2@uic.edu>, Aakash Jain <ajain202@uic.edu>, Vedant Maheshwari <vmahes4@uic.edu>",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "chart.js": "^3.7.1",
+    "leaflet": "^1.8.0",
+    "leaflet-routing-machine": "^3.2.12",
+    "next": "^12.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.2.0",
+    "react-leaflet": "^4.0.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.0",
+    "styled-components": "^5.3.5",
+    "tabler-icons-react": "^1.44.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+  }
+}
