@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className="mx-auto container px-6 py-2 lg:py-0">
             <div className="flex items-center justify-between">
               <div className="flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
-                <Link to={'/'} className="flex items-center" onClick={() => setCurrentNav('home')}>
+                <Link to={'/deliwer'} className="flex items-center" onClick={() => setCurrentNav('home')}>
                   <Logo />
                   <h2 className="text-base font-bold leading-normal pl-3">DELIWER</h2>
                 </Link>
