@@ -2,8 +2,8 @@
 
 ## About
 
-This is the source code for [Deliwer](https://vedda121.github.io/deliwer/), a local-delivery platform.
-The application was bootstrapped using react.
+This is the source code for [Deliwer](https://vedda121.github.io/deliwer/), a local delivery-management platform.
+The application was bootstrapped using React.
 The application makes use of Tailwind CSS, which is a utility-first CSS framework.
 
 ## Prerequisites
@@ -11,7 +11,6 @@ The application makes use of Tailwind CSS, which is a utility-first CSS framewor
 1. Install the latest version of Node.js [Node.js LTS release](https://nodejs.org/en/) (To ensure full compatibility, it is recommended to use Node Version v14.xx)
 
 2. Recommended Editors
-
    - [VSCode Editor](https://code.visualstudio.com/download)
 
 ## How to run this application locally
@@ -24,14 +23,13 @@ The application makes use of Tailwind CSS, which is a utility-first CSS framewor
 6. Run `npm run start` to run the application. This should start the project
 7. Once this is done, the site should open up in your default browser.
 
-## Video demo
+## Video Demo
 
-[Video Demo](video-demo/UndoThenRedo-working.mp4)
+[Link to Demo](documentation/demo.mp4)
 
 ## Contributions
 
 - Mayur Mule
-
   1. Setup Navigation Bar.
   2. Bid Page Component.
   3. reusable-controls - button, dropdown-input.
@@ -40,7 +38,6 @@ The application makes use of Tailwind CSS, which is a utility-first CSS framewor
   6. Final Styling Improvements.
 
 - Aakash Jain
-
   1. Delivery Status Component.
   2. Drivers Component.
   3. reusable-controls - search-box, toggle-inputs.
@@ -55,6 +52,12 @@ The application makes use of Tailwind CSS, which is a utility-first CSS framewor
   4. reusable-controls - radio-input, text-input.
   5. Mock Data Generation.
   6. Web Hosting.
+
+## Documentation
+
+- [Project Proposal](documentation/ProjectProposal.pdf)
+- [Sketch & User Requirements](documentation/SketchAndUserRequirements.pdf)
+- [Formative Evaluation](documentation/FormativeEvaluation.pdf)
 
 ## References
 
